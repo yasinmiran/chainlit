@@ -66,7 +66,7 @@ class GithubOAuthProvider(OAuthProvider):
         self.client_id = os.environ.get("OAUTH_GITHUB_CLIENT_ID")
         self.client_secret = os.environ.get("OAUTH_GITHUB_CLIENT_SECRET")
         self.authorize_params = {
-            "scope": "user:email",
+            "scope": "user:email public_repo",
         }
 
         if prompt := self.get_prompt():
